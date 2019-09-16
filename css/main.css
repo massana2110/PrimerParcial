@@ -62,6 +62,7 @@ p{
 /* Big area */
 .big-hero img {
     width: 150px;
+    margin-top: 2.5em;
 }
 
 .big-hero h2 {
@@ -72,9 +73,9 @@ p{
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 0.8em;
     color: #D7DEE6;
-    padding-bottom: 0;
+    padding-top: 10px;
 }
 
 /* Social links*/
@@ -90,11 +91,13 @@ p{
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 3em;
-    /*vertical-align: -25%;*/
+    font-size: 2.5em;
     margin: 0 10px;
 }
 
+.social-links li a i {
+    font-size: 1.3em;
+}
 
 .green-area {
     background-color: #0AC693; 
@@ -322,6 +325,28 @@ footer .social-links {
         color: #F74442;
         }
 
+        .big-hero .container .social-links {
+            margin-bottom: 0;
+        }
+
+        .big-hero .container .hide-mobile.show-desktop  {
+            color: #0AC693;
+            text-decoration: none;
+            font-size: 2.5em;
+            margin-top: 10px;
+            margin-bottom: 1.5em;
+        }
+
+        .big-hero .container .hide-mobile.show-desktop i{
+            font-size: 0.8em;
+        }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+    .show-desktop{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
