@@ -341,13 +341,25 @@ footer .social-links {
             font-size: 0.8em;
         }
 
+        .about .container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+
+        .about .container h2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .about .container .bio-info{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        
+
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1023px){
-    .show-desktop{
-        display: none;
-    }
-}
 
 @media only screen and (min-width: 1440px) {
 
@@ -362,9 +374,4 @@ footer .social-links {
         color: #F74442;
     }
 
-    .about {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
 }
