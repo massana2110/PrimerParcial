@@ -33,7 +33,7 @@ body {
 
 p{
     font-size: 0.75em;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     line-height: 25px;
 }
 
@@ -73,7 +73,7 @@ p{
 }
 
 .big-hero p {
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #D7DEE6;
     padding-top: 10px;
 }
@@ -96,7 +96,7 @@ p{
 }
 
 .social-links li a i {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .green-area {
@@ -171,7 +171,7 @@ p{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
-    margin: 2em;
+    margin: 1em;
 }
 
 .bio-info img{
@@ -312,6 +312,26 @@ footer .social-links {
         margin-top: 1em;
     }
 
+    .header nav ul li a:hover {
+        color: #F74442;
+    }
+
+
+    .big-hero .container .social-links {
+        margin-bottom: 0;
+    }
+
+    .big-hero .container .hide-mobile.show-desktop  {
+        color: #0AC693;
+        text-decoration: none;
+        font-size: 2.5em;
+        margin-top: 10px;
+        margin-bottom: 1.5em;
+    }
+
+    .big-hero .container .hide-mobile.show-desktop i{
+        font-size: 0.8em;
+    }
     
 
 
@@ -321,24 +341,14 @@ footer .social-links {
 @media only screen and (min-width: 1024px) {
 
        /*TODO: FALTA CSS */
-       .header nav ul li a:hover {
-        color: #F74442;
-        }
+       
+        
 
-        .big-hero .container .social-links {
-            margin-bottom: 0;
-        }
-
-        .big-hero .container .hide-mobile.show-desktop  {
-            color: #0AC693;
-            text-decoration: none;
-            font-size: 2.5em;
-            margin-top: 10px;
-            margin-bottom: 1.5em;
-        }
-
-        .big-hero .container .hide-mobile.show-desktop i{
-            font-size: 0.8em;
+        /*Aqui se añade el display grid para que cuando se visualize en computadora, 
+        se separe en dos columnas esta seccion. Con grid-template-columns y rows se
+        especifica como dividire mi grid.*/
+        .about {
+            margin-top: 0px;
         }
 
         .about .container {
@@ -347,17 +357,38 @@ footer .social-links {
             grid-template-rows: repeat(2, auto);
         }
 
+        /*Esta regla solo es para centrar el h2 de la section about. Se donde termina mi columna de grid
+        porqué utilize el inspeccionador de elementos de mozilla firefox el cual me da la opcion de 
+        superponer la rejilla (grid)*/
         .about .container h2 {
             grid-column-start: 1;
             grid-column-end: 3;
         }
+
         .about .container .bio-info{
             grid-column-start: 1;
             grid-column-end: 2;
         }
 
-        
+        .about .container .contact{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            display: flex;
+            align-items: center;
+        }
 
+        .about .container .contact .contact-form{
+            width: 80%;
+            
+        }
+
+        .contact-form input[type=submit]{
+            width: 50%;
+        }
+
+        footer .social-links{
+            padding-top: 1em;
+        }
 }
 
 
