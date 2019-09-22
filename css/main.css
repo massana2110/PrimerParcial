@@ -2,11 +2,15 @@
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+/*Estilos generales base para todos los elementos*/
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: calc(0.5em + 1vh);
+    font-size: calc(0.5em + 1vh); 
+    /*Calculo del tamaño de fuente dependiendo de en que dispositivo
+    se visualize*/
 }
 
 /* El estilo base para moviles */
@@ -18,12 +22,14 @@ body {
     font-weight: 400;
 }
 
+/*Contenedor header donde aloja el logo y el nav*/
 .header {
-    margin: 1em 1.5em 1em;
+    margin: 0.5em 2em;
     display: flex;
     justify-content: space-between
 }
 
+/*Estas dos reglas solo esconden el menu de navegacion para cuando se ve en moviles*/
 .src-only {
     display: none;
 }
@@ -34,7 +40,6 @@ body {
 
 p{
     font-size: 0.75em;
-    /*padding: 0 1rem 1rem;*/
     line-height: 25px;
 }
 
@@ -57,6 +62,7 @@ p{
 
 }
 
+/*Con esta regla coloco el icono de X*/
 .options i:last-child {
     font-size: 1.6rem;
     display: block;
@@ -67,7 +73,7 @@ p{
 
 /* Big area */
 .big-hero img {
-    width: 150px;
+    width: 125px;
     margin-top: 1em;
 }
 
@@ -104,6 +110,7 @@ p{
     margin: 0 0.35em;
 }
 
+/*Aqui agrando el tamaño de los iconos de las redes sociales*/
 .social-links li a i {
     font-size: 1.5em;
 }
@@ -112,11 +119,11 @@ p{
     background-color: #0AC693; 
 }
 
-
 .post {
     padding: 0.5em 0.5em 0;
     margin-bottom: -2px;
 }
+
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -128,6 +135,7 @@ p{
     list-style: none;
 }
 
+/*Se establecen los tamaños de las cajitas de los articles*/
 .post ul li {
     min-height: 350px;
     max-width: 300px;
@@ -140,6 +148,7 @@ p{
     margin-bottom: 0;
 }
 
+/*Diseño del contenido de cada article*/
 .post ul li article {
     overflow: hidden;
     border-radius: 10px;
@@ -160,7 +169,7 @@ p{
     padding: 0em 1rem;
     font-size: 0.9em;
     font-weight: 700;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -182,6 +191,7 @@ p{
     align-content: center;
 }
 
+/*Para que se vea con espaciado el subitulo entre la seccion .post y .bio-info*/
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -203,24 +213,26 @@ p{
     letter-spacing: 2px;
 }
 
+/*Estilos para el formulario, que se vea en 1 columna para moviles*/
 .contact {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 0px 2em;
     margin: 0px 1.5em 2.5em;
-    
 }
 
 .contact * + * {
     margin-top: 1.5em;
 }
 
+/*Posicion de los elementos del formulario en columna*/
 .contact-form {
     display: flex;
     flex-direction: column;
 }
 
+/*Aplicando el estilo bold de la fuente importada desde google fonts*/
 .contact-form label{
     font-weight: 700;
 }
@@ -231,7 +243,7 @@ p{
     border-radius: 0px 2em;
     font-size: 1em;
     width: 100%;
-    resize: none;
+    resize: none; /*Para que el usuario no pueda cambiar el tamaño de mi text area*/
 }
 
 
@@ -258,6 +270,7 @@ p{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/*Estilos para el pie de pagina "footer"*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
@@ -271,6 +284,7 @@ footer p {
     padding-bottom: 1em;
 }
 
+/*Diseño del menu cuando alguien da click en las 3 barras en la vista de moviles*/
 .menu {
     background-color: #112935;
     position: absolute;
@@ -303,8 +317,11 @@ footer p {
   
     .big-hero img {
         margin-top: 3em;
+        width: 150px;
     }
 
+    /*Disposicion wrap para que cuando no quepa el elemento en 
+    la pantalla, este se mueva para abajo*/
     .post ul {
         list-style: none;
         display: flex;
@@ -319,12 +336,12 @@ footer p {
         flex: 1 0 300px;
     }
 
-
     .logo {
         width: 150px;
         margin: 0.5em 1.5em;
     }
 
+    /*Para ocultar los iconos de las 3 barras y mostrar el menu en version desktop*/
     .show-desktop {
         display: block;
     }
@@ -338,20 +355,23 @@ footer p {
         position: static;
         z-index: 20;
         width: auto;
-        height:auto;
+        height: auto;
         display: flex;
         margin-top: 0;
     }
 
+    /*Añade un efecto de hover al menu de navegacion*/
     .header nav ul li a:hover {
         color: #F74442;
     }
 
-
+    /*Para que no tengan mucho espaciado los iconos de redes sociales 
+    y el icono de la flecha para abajo*/
     .big-hero .container .social-links {
         margin-bottom: 0;
     }
 
+    /*Accedo al icono de la flecha y le doy estilos*/
     .big-hero .container .hide-mobile.show-desktop  {
         color: #0AC693;
         text-decoration: none;
@@ -360,22 +380,18 @@ footer p {
         margin-bottom: 1.3em;
     }
 
+    /*Establezo un tamaño mas grande al icono*/
     .big-hero .container .hide-mobile.show-desktop i{
         font-size: 0.8em;
     }
-    
 
-
-    /*TODO: FALTA CSS */
 } 
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
-
         /*Aqui se añade el display grid para que cuando se visualize en computadora, 
-        se separe en dos columnas esta seccion. Con grid-template-columns y rows se
-        especifica como dividire mi grid.*/
+        se separe en dos columnas esta seccion. 
+        Con grid-template-columns y rows se especifica como dividire mi grid.*/
         .about {
             margin-top: 0px;
         }
@@ -386,9 +402,9 @@ footer p {
             grid-template-rows: repeat(2, auto);
         }
 
-        /*Esta regla solo es para centrar el h2 de la section about. Se donde termina mi columna de grid
-        porqué utilize el inspeccionador de elementos de mozilla firefox el cual me da la opcion de 
-        superponer la rejilla (grid)*/
+        /*Esta regla solo es para centrar el h2 de la section about. Sé donde termina mi columna 
+        de grid porqué utilizé el inspeccionador de elementos de mozilla firefox el cual me da la 
+        opcion de superponer la rejilla (grid)*/
         .about .container h2 {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -407,10 +423,13 @@ footer p {
             align-items: center;
         }
 
+        /*Establezco el width de todo mi formulario, lo hago con % para que 
+        se adapte de acuerdo a la pantalla en la que se visualiza*/
         .about .container .contact .contact-form{
             width: 90%;
         }
 
+        /*Achico el boton de Contactar*/
         .contact-form input[type=submit]{
             width: 50%;
         }
@@ -428,6 +447,13 @@ footer p {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
+    }
+
+    /*Para que los elementos en mi header no se alejen demasiado del centro*/
+    .header {
+        margin: 0.5em 4em;
+        display: flex;
+        justify-content: space-between
     }
 
     .header nav ul li a:hover {
