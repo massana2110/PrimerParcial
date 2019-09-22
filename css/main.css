@@ -19,6 +19,7 @@ body {
 }
 
 .header {
+    margin: 1em 1.5em 1em;
     display: flex;
     justify-content: space-between
 }
@@ -38,8 +39,8 @@ p{
 }
 
 .logo {
-    width: 90px;
-    margin: 1em 2em;
+    width: 100px;
+    margin: 1em;
 }
 
 .options {
@@ -79,7 +80,10 @@ p{
 
 .big-hero p {
     font-size: 0.85em;
-    color: #D7DEE6;
+    /*color: #D7DEE6;*/ 
+    /*Cambie el color que tenia por un rgba para darle
+    opacidad*/
+    color: rgba(255,255,255,0.6);
     padding-top: 10px;
 }
 
@@ -125,8 +129,8 @@ p{
 }
 
 .post ul li {
-    min-height: 300px;
-    max-width: 350px;
+    min-height: 350px;
+    max-width: 300px;
     margin: 2rem auto;
 }
 
@@ -145,7 +149,7 @@ p{
 }
 
 .post article img{
-    height: 150px;
+    height: 175px;
     width: 100%;
     object-fit: cover;
 }
@@ -305,8 +309,7 @@ footer p {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around; /*Valor que tenia: center... Valor al cual le cambie: space around 
-                                        puesto que quiero que se distibuya en todo el ancho del container*/
+        justify-content: center;
     }
     
     .post ul li {
